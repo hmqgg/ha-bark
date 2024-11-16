@@ -1,7 +1,6 @@
 """Constants for the Yamaha component."""
 DOMAIN = "ha_bark"
 DATA_BARK = "bark_data"
-ATTR_KEY = "device_key"
 ATTR_COPY = "copy"
 ATTR_SOUND = "sound"
 ATTR_LEVEL="level"

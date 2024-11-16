@@ -9,7 +9,7 @@ from homeassistant.components.notify import (
     BaseNotificationService
 )
 from homeassistant.const import CONF_HOST, CONF_TOKEN
-from .const import ATTR_AUTO_COPY, ATTR_BADGE, ATTR_COPY, ATTR_GROUP, ATTR_ICON, ATTR_KEY, ATTR_LEVEL, ATTR_SOUND, ATTR_URL, DATA_BARK
+from .const import ATTR_AUTO_COPY, ATTR_BADGE, ATTR_COPY, ATTR_GROUP, ATTR_ICON, ATTR_LEVEL, ATTR_SOUND, ATTR_URL, DATA_BARK
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -42,7 +42,7 @@ class BarkNotificationService(BaseNotificationService):
 
             params = {}
             params["body"] = message
-            params[ATTR_KEY] = config[CONF_TOKEN]
+            params["device_key"] = config[CONF_TOKEN]
 
             if (
                 (title := kwargs.get(ATTR_TITLE)) is not None
@@ -51,9 +51,6 @@ class BarkNotificationService(BaseNotificationService):
                 params[ATTR_TITLE] = title
 
             if (data := kwargs.get(ATTR_DATA)) is not None:
-                if (key := data.get(ATTR_KEY)) is not None:
-                    # overwrite device_key if explicit provided
-                    params[ATTR_KEY] = key
                 if (copy := data.get(ATTR_COPY)) is not None:
                     params[ATTR_COPY] = copy
                     if data.get(ATTR_AUTO_COPY):
