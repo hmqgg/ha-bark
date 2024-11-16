@@ -4,10 +4,10 @@
             "user": {
                 "data": {
                     "name": "名称",
-                    "host": "服务器域名或IP, 如https://api.day.app",
-                    "token": "Device token, 如https://api.day.app/xxxx中的xxxx部分"
+                    "host": "服务器域名或 IP, 如 https://api.day.app",
+                    "token": "Key, 如 https://api.day.app/xxxx 中的 xxxx 部分"
                 },
-                "title": "Bark设置"
+                "title": "Bark 设置"
             }
         }
     },
@@ -16,10 +16,10 @@
             "init": {
                 "data": {
                     "name": "名称",
-                    "host": "服务器域名或IP, 如https://api.day.app",
-                    "token": "Device token, 如https://api.day.app/xxxx中的xxxx部分"
+                    "host": "服务器域名或 IP, 如 https://api.day.app",
+                    "token": "Key, 如 https://api.day.app/xxxx 中的 xxxx 部分"
                 },
-                "title": "Bark设置"
+                "title": "Bark 设置"
             }
         }
     }
